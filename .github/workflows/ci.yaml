@@ -136,6 +136,8 @@ jobs:
           - backend: { name: "uml", backend: "--fakemachine-backend=uml" }
             test: { name: "apertis", case: "apertis" }
           - backend: { name: "uml", backend: "--fakemachine-backend=uml" }
+            test: { name: "kali", case: "kali" }
+          - backend: { name: "uml", backend: "--fakemachine-backend=uml" }
             test: { name: "partitioning", case: "partitioning" }
     name: ${{matrix.test.name}} on ${{matrix.backend.name}}
     steps:
