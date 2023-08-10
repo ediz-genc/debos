@@ -134,7 +134,9 @@ jobs:
           - backend: { name: "qemu", backend: "--fakemachine-backend=qemu" }
             test: { name: "partitioning", case: "partitioning" }
           - backend: { name: "uml", backend: "--fakemachine-backend=uml" }
-            test: { name: "apertis", case: "apertis" }
+            test: { name: "apertis v2022", case: "apertis", variables: "-t suite:v2022" }
+          - backend: { name: "uml", backend: "--fakemachine-backend=uml" }
+            test: { name: "apertis v2024dev3", case: "apertis", variables: "-t suite:v2024dev3 -t parent_suite:bookworm" }
           - backend: { name: "uml", backend: "--fakemachine-backend=uml" }
             test: { name: "kali", case: "kali" }
           - backend: { name: "uml", backend: "--fakemachine-backend=uml" }
